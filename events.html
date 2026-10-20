@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workshops and Events | Riverbend Yoga Studio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="yoga-logo.png" alt="Riverbend Yoga Studio logo" width="120"></a>
+    <p>Riverbend Yoga Studio — space to breathe and belong</p>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Classes and Services</a></li>
+        <li><a href="about.html">About the Studio</a></li>
+        <li><a href="events.html" aria-current="page">Workshops and Requests</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Workshops and Events</h1>
+    <section aria-labelledby="workshops">
+      <h2 id="workshops">Monthly workshop interests</h2>
+      <p>These are example workshop themes; contact the studio for confirmed dates and openings.</p>
+      <ul>
+        <li><strong>Breath and Reset:</strong> gentle breathing and grounding.</li>
+        <li><strong>Yoga for Beginners:</strong> an introduction to poses and props.</li>
+        <li><strong>Rest and Restore:</strong> supported movement and relaxation.</li>
+      </ul>
+      <figure>
+        <img src="yoga-workshop.png" alt="Yoga workshop participants practicing together in a calm studio setting" width="600">
+        <figcaption>Riverbend workshops create space to learn, connect, and practice at your own pace.</figcaption>
+      </figure>
+    </section>
+    <section aria-labelledby="request">
+      <h2 id="request">Request a spot or more information</h2>
+      <p>Tell us what interests you. This form demonstrates browser validation but does not send information to the studio until a form-processing service is configured.</p>
+      <form action="#" method="get">
+        <fieldset>
+          <legend>Your contact details</legend>
+          <p><label for="full-name">Full name (required)</label><br>
+          <input id="full-name" name="full-name" type="text" autocomplete="name" minlength="2" required></p>
+          <p><label for="email">Email address (required)</label><br>
+          <input id="email" name="email" type="email" autocomplete="email" required></p>
+        </fieldset>
+        <fieldset>
+          <legend>Your yoga interests</legend>
+          <p><label for="interest">Class or event interest (required)</label><br>
+          <select id="interest" name="interest" required>
+            <option value="">Choose an option</option>
+            <option value="gentle">Gentle Yoga</option>
+            <option value="vinyasa">Vinyasa Yoga</option>
+            <option value="restorative">Restorative Yoga</option>
+            <option value="private">Private Session</option>
+            <option value="breath">Breath and Reset Workshop</option>
+            <option value="beginners">Yoga for Beginners Workshop</option>
+            <option value="rest">Rest and Restore Workshop</option>
+          </select></p>
+          <p><label for="experience">Experience level (required)</label><br>
+          <select id="experience" name="experience" required>
+            <option value="">Choose your level</option>
+            <option value="new">New to yoga</option>
+            <option value="some">Some experience</option>
+            <option value="regular">Regular practice</option>
+          </select></p>
+        </fieldset>
+        <fieldset>
+          <legend>Preferred contact method (required)</legend>
+          <p><input id="contact-email" type="radio" name="contact-method" value="email" required>
+          <label for="contact-email">Email</label></p>
+          <p><input id="contact-phone" type="radio" name="contact-method" value="phone">
+          <label for="contact-phone">Phone (please include your number in the message)</label></p>
+        </fieldset>
+        <p><label for="message">Message (required)</label><br>
+        <textarea id="message" name="message" rows="5" cols="45" minlength="10" required></textarea></p>
+        <p><button type="submit">Request a Spot</button></p>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>Riverbend Yoga Studio — a welcoming practice for every stage of life.</p>
+    <p><a href="events.html" aria-current="page">Ask about a class or workshop</a></p>
+  </footer>
+</body>
+</html>
