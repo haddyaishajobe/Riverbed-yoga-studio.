@@ -36,14 +36,14 @@
     </section>
     <section aria-labelledby="request">
       <h2 id="request">Request a spot or more information</h2>
-      <p>Tell us what interests you. This form demonstrates browser validation but does not send information to the studio until a form-processing service is configured.</p>
-      <form action="#" method="get">
+      <p>Tell us what interests you. This demonstration form checks your entries in the browser. A successful check does not send your request to the studio.</p>
+      <form id="interest-form" action="#" method="get" novalidate>
         <fieldset>
           <legend>Your contact details</legend>
           <p><label for="full-name">Full name (required)</label><br>
-          <input id="full-name" name="full-name" type="text" autocomplete="name" minlength="2" required></p>
+          <input id="full-name" name="full-name" type="text" autocomplete="name" minlength="2" required><span class="field-error" id="full-name-error" aria-live="polite"></span></p>
           <p><label for="email">Email address (required)</label><br>
-          <input id="email" name="email" type="email" autocomplete="email" required></p>
+          <input id="email" name="email" type="email" autocomplete="email" required><span class="field-error" id="email-error" aria-live="polite"></span></p>
         </fieldset>
         <fieldset>
           <legend>Your yoga interests</legend>
@@ -57,14 +57,14 @@
             <option value="breath">Breath and Reset Workshop</option>
             <option value="beginners">Yoga for Beginners Workshop</option>
             <option value="rest">Rest and Restore Workshop</option>
-          </select></p>
+          </select><span class="field-error" id="interest-error" aria-live="polite"></span></p>
           <p><label for="experience">Experience level (required)</label><br>
           <select id="experience" name="experience" required>
             <option value="">Choose your level</option>
             <option value="new">New to yoga</option>
             <option value="some">Some experience</option>
             <option value="regular">Regular practice</option>
-          </select></p>
+          </select><span class="field-error" id="experience-error" aria-live="polite"></span></p>
         </fieldset>
         <fieldset>
           <legend>Preferred contact method (required)</legend>
@@ -72,10 +72,12 @@
           <label for="contact-email">Email</label></p>
           <p><input id="contact-phone" type="radio" name="contact-method" value="phone">
           <label for="contact-phone">Phone (please include your number in the message)</label></p>
+          <span class="field-error" id="contact-method-error" aria-live="polite"></span>
         </fieldset>
         <p><label for="message">Message (required)</label><br>
-        <textarea id="message" name="message" rows="5" cols="45" minlength="10" required></textarea></p>
+        <textarea id="message" name="message" rows="5" cols="45" minlength="10" required></textarea><span class="field-error" id="message-error" aria-live="polite"></span></p>
         <p><button type="submit">Request a Spot</button></p>
+        <p id="form-status" role="status" aria-live="polite"></p>
       </form>
     </section>
   </main>
@@ -83,5 +85,6 @@
     <p>Riverbend Yoga Studio — a welcoming practice for every stage of life.</p>
     <p><a href="events.html" aria-current="page">Ask about a class or workshop</a></p>
   </footer>
+  <script src="script.js" defer></script>
 </body>
 </html>
